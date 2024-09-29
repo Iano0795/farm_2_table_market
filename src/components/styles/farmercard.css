@@ -1,0 +1,17 @@
+@import url('global.css');
+.farmerCard{
+    width: 25%;
+    height: 100%;
+    border: var(--container_border);
+    justify-content: space-around;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+}
+.farmBanner{
+    width: 100%;
+    height: 200px;
+    border: var(--container_border);
+}

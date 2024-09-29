@@ -1,0 +1,21 @@
+@import url('global.css');
+.recipeCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 100%;
+    border: var(--container_border);
+    padding: 15px;
+    cursor: pointer;
+}
+.recipeBanner{
+    width: 70%;
+    border: var(--container_border);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}

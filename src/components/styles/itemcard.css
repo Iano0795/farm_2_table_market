@@ -1,0 +1,32 @@
+@import url('global.css');
+.itemCard{
+    width: 25%;
+    height: 100%;
+    border: var(--container_border);
+    justify-content: space-around;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+    margin: 10px;
+}
+.itemBanner{
+    width: 100%;
+    height: 200px;
+    border: var(--container_border);
+}
+.descriptionContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.descriptionContainer div:last-child{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
