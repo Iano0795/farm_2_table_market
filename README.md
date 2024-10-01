@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Farm 2 Table
 
-## Available Scripts
+## Overview
+Farm 2 Table is a web application that connects local farmers with consumers within their geographical area. The platform allows farmers to post their farm produce, while consumers can browse and purchase directly from nearby farmers, promoting fresh, organic, and locally sourced products.
 
-In the project directory, you can run:
+## Features
+- **Farmer Profiles**: Farmers can create profiles and list their available produce with details such as price, quantity, and location.
+- **Consumer Interface**: Consumers can browse listings by location, filter by product type, and contact farmers directly for purchases.
+- **Geolocation**: Users are matched based on their proximity to ensure fresh and timely delivery of farm products.
+- **Mobile-Responsive**: The platform is fully responsive and can be accessed from mobile devices.
 
-### `npm start`
+## Technology Stack
+- **Frontend**: 
+  - React.js
+  - HTML5/CSS3
+  - JavaScript (ES6+)
+  
+- **Backend**: 
+  - Node.js
+  - Express.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Database**: 
+  - MySQL (or PostgreSQL, based on preference)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and Setup
+To run this project locally:
 
-### `npm test`
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/farm2table.git
+    cd farm2table
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install the dependencies**:
+    - Frontend:
+      ```bash
+      cd frontend
+      npm install
+      ```
 
-### `npm run build`
+    - Backend:
+      ```bash
+      cd backend
+      npm install
+      ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Create a `.env` file in the backend directory**:
+    Add the following environment variables:
+    ```env
+    PORT=5000
+    DB_HOST=your_database_host
+    DB_USER=your_database_user
+    DB_PASSWORD=your_database_password
+    DB_NAME=your_database_name
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Set up the SQL database**:
+    - Make sure you have MySQL (or your preferred SQL database) installed.
+    - Create the database manually using a MySQL client:
+      ```sql
+      CREATE DATABASE farm2table;
+      ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    - Run any migration scripts you’ve written to create the necessary tables.
 
-### `npm run eject`
+5. **Run the application**:
+    - Frontend:
+      ```bash
+      npm start
+      ```
+    - Backend:
+      ```bash
+      npm run server
+      ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. **Access the application**:
+    The frontend will be available at `http://localhost:3000` and the backend API at `http://localhost:5000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure
+    ```
+    /frontend
+        /src
+            /components - Reusable components
+            /pages - Individual page components
+            /styles - Global and page-specific styles
+    /backend
+        /routes - API routes
+        /controllers - Business logic
+        /models - SQL table models
+        /migrations - SQL migration scripts
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+If you’d like to contribute to Farm 2 Table, feel free to submit a pull request. For major changes, please open an issue to discuss what you would like to change.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## Contact
+- **Project Lead**: Ian Kipkorir
+- **Email**: your-email@example.com
+- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Notes:
+1. **Environment Variables**: You will need `DB_HOST`, `DB_USER`, `DB_PASSWORD`, and `DB_NAME` in your `.env` file to connect to your SQL database.
+2. **Database Setup**: Instructions include creating the SQL database manually and using migration scripts for table creation (if you have any).
+3. **Migrations Folder**: This folder can contain SQL scripts for creating and managing the database schema.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you need help with specific sections like database migrations or setting up SQL with Node.js!
